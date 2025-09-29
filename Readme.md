@@ -1,11 +1,9 @@
-Sequestra - Environmental Project Platform
+Carbon Broker - Environmental Project Platform
 Project Overview
 Sequestra is a conceptual web application designed as a platform for tracking and trading carbon credits from sustainable environmental projects. It provides separate dashboard views for different user roles:
 
 Admin: A government or regulatory body to oversee projects.
-
 NGO: An organization to register and manage environmental projects.
-
 Business: A corporate entity to buy and sell carbon credits to offset emissions.
 
 The platform aims to enhance transparency in the carbon credit market through blockchain technology (conceptually).
@@ -13,22 +11,15 @@ The platform aims to enhance transparency in the carbon credit market through bl
 Project Structure
 This project is built with static HTML, CSS, and JavaScript, making it easy to host and demonstrate.
 
-/admin.html: The main landing page, which also serves as the Admin Dashboard.
-
-/login.html: User login page.
-
+/index.html: The main landing page, which also serves as the Home Page.
+/admin.html: The Admin Dashboard Page.
+/login.html: User login page either as NGO or Business and also theLogin page for Admin.
 /register.html: User registration page with options for NGOs and Businesses.
-
 /ngo-dashboard.html: The dashboard for NGO users to manage their projects.
-
 /business-dashboard.html: The dashboard for Business users to trade carbon credits.
-
 /news.html: A page for displaying relevant industry news.
-
 /style.css: The main stylesheet containing all the custom styles for the project.
-
 /main.js: JavaScript for interactive elements, primarily for the price chart and trading functions on the Business Dashboard.
-
 /register.js: JavaScript for handling the tab switching on the registration page.
 
 Technologies Used
