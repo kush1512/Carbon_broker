@@ -54,16 +54,59 @@
                             <input type="password" id="password" class="form-input" required placeholder="••••••••">
                         </div>
 
-                        <!-- Toggle Switch for NGO / Business -->
+                                                <!-- Toggle Switch for NGO / Business -->
                         <div class="flex items-center justify-center space-x-4 mt-4">
-                            <span class="text-gray-400">NGO</span>
-                            <label class="relative inline-flex items-center cursor-pointer">
-                                <input type="checkbox" value="" id="roleToggle" class="sr-only peer">
-                                <div class="w-14 h-7 bg-gray-200 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-500 rounded-full peer dark:bg-gray-700 peer-checked:bg-blue-600 transition"></div>
-                                <div class="absolute left-1 top-1 w-5 h-5 bg-white rounded-full shadow-md peer-checked:translate-x-7 transition"></div>
-                            </label>
-                            <span class="text-gray-400">Business</span>
+                        <!-- NGO label -->
+                        <span id="ngoLabel"
+                            class="px-3 py-1 rounded-full text-sm transition
+                                text-white bg-blue-600 shadow-lg font-semibold">
+                            NGO
+                        </span>
+
+                        <label class="relative inline-flex items-center cursor-pointer">
+                            <input type="checkbox" id="roleToggle" class="sr-only peer" />
+                            <!-- Background -->
+                            <div
+                            class="w-14 h-7 bg-gray-200 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-500 rounded-full peer dark:bg-gray-700 peer-checked:bg-blue-600 transition"
+                            ></div>
+                            <!-- Circle -->
+                            <div
+                            class="absolute left-1 top-1 w-5 h-5 bg-white rounded-full shadow-md peer-checked:translate-x-7 transition"
+                            ></div>
+                        </label>
+
+                        <!-- Business label -->
+                        <span id="businessLabel"
+                            class="px-3 py-1 rounded-full text-sm transition
+                                text-gray-400 bg-transparent">
+                            Business
+                        </span>
                         </div>
+
+                        <script>
+                        const toggle = document.getElementById("roleToggle");
+                        const ngoLabel = document.getElementById("ngoLabel");
+                        const businessLabel = document.getElementById("businessLabel");
+
+                        function updateLabels() {
+                            if (toggle.checked) {
+                            // Highlight Business
+                            ngoLabel.className =
+                                "px-3 py-1 rounded-full text-sm transition text-gray-400 bg-transparent";
+                            businessLabel.className =
+                                "px-3 py-1 rounded-full text-sm transition text-white bg-blue-600 shadow-lg font-semibold";
+                            } else {
+                            // Highlight NGO
+                            businessLabel.className =
+                                "px-3 py-1 rounded-full text-sm transition text-gray-400 bg-transparent";
+                            ngoLabel.className =
+                                "px-3 py-1 rounded-full text-sm transition text-white bg-blue-600 shadow-lg font-semibold";
+                            }
+                        }
+
+                        toggle.addEventListener("change", updateLabels);
+                        updateLabels(); // initialize
+                        </script>
 
                         <button type="submit" class="w-full bg-blue-500 text-white py-3 rounded-lg font-semibold hover:bg-blue-600 transition">
                             Login
@@ -96,3 +139,4 @@
     </script>
 </body>
 </html>
+
