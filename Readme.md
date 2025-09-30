@@ -1,6 +1,7 @@
 Carbon Broker - Environmental Project Platform
+
 Project Overview
-Sequestra is a conceptual web application designed as a platform for tracking and trading carbon credits from sustainable environmental projects. It provides separate dashboard views for different user roles:
+Carbon Broker is a conceptual web application designed as a platform for tracking and trading carbon credits from sustainable environmental projects. It provides separate dashboard views for different user roles:
 
 Admin: A government or regulatory body to oversee projects.
 NGO: An organization to register and manage environmental projects.
@@ -31,3 +32,4 @@ Vanilla JavaScript: For client-side interactivity.
 
 How to Run
 Simply open any of the .html files in your web browser to view the pages.
+
